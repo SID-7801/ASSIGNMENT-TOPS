@@ -6,9 +6,22 @@ int main()
     scanf("%d",&year);
     if(year % 4==0)
     {
-        printf("%d year is a leaf year",year);
+        if(year % 400==0)
+        {
+             if(year % 100==0)
+             {
+                printf("%d is a leap year",year);
+             }
+             else{
+                printf("%d is not a leap year",year);
+             }
+        }
+        else{
+            printf("%d is a leap year",year);
+        }
     }
     else{
-        printf("%d year is not a leaf year",year);
+        printf("%d is not a leap year",year);
     }
+
 }
