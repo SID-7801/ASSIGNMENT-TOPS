@@ -1,17 +1,28 @@
 #include<stdio.h>
 int main()
 {
-    int q,w,e,r,t,y,u,i,o,p;
-    printf("Enter 10 elements: \n");
-    scanf("%d,%d,%d,%d,%d,%d,%d,%d,%d,%d",&q,&w,&e,&r,&t,&y,&u,&i,&o,&p);
-    q % 2==0?printf("%d is even number \n",q):printf("%d is odd number \n",q);
-    w % 2==0?printf("%d is even number \n",w):printf("%d is odd number \n",w);
-    e % 2==0?printf("%d is even number \n",e):printf("%d is odd number \n",e);
-    r % 2==0?printf("%d is even number \n",r):printf("%d is odd number \n",r);
-    t % 2==0?printf("%d is even number \n",t):printf("%d is odd number \n",t);
-    y % 2==0?printf("%d is even number \n",y):printf("%d is odd number \n",y);
-    u % 2==0?printf("%d is even number \n",u):printf("%d is odd number \n",u);
-    i % 2==0?printf("%d is even number \n",i):printf("%d is odd number \n",i);
-    o % 2==0?printf("%d is even number \n",o):printf("%d is odd number \n",o);
-    p % 2==0?printf("%d is even number \n",p):printf("%d is odd number \n",p);
-}
+    int num[10],i,even=0,odd=0,sumeven=0,sumodd=0;
+    printf("Enter 10 Elements : ");
+    for (i = 0; i < 10; i++)
+    { 
+        scanf("%d",&num[i]);
+
+        if(num[i]%2==0)
+        {
+            even++;
+            sumeven=sumeven+num[i];
+        }
+        else
+        {
+            odd++;
+            sumodd=sumodd+num[i];
+        }
+    }
+    printf("\n even number are %d \n",even);
+    printf("\n odd number are %d \n",odd);
+    printf("\n sum of even number are %d \n",sumeven);
+    printf("\n sum of odd number are %d \n",odd);
+
+    }
+    
+   
